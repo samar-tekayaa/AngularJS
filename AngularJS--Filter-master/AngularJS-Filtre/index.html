@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+	<title> Tutorial </title>
+</head>
+<script type="text/javascript" src="Angular/angular.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<body>
+ 
+
+<div ng-controller="myCtr">
+Search : <input type="text" ng-model="searching">
+<table>
+	<tr ng-repeat="personne in personnes | filter : searching ">
+		<td>
+			<img ng-src="image/{{personne.name}}.png" width="100" height="100">
+			</td>
+			<td>
+			{{personne.name}}
+			
+</br>
+
+		
+			{{personne.age}}
+			</td>
+				
+	</tr>
+
+</table>
+</div>
+
+</body>
+</html>
