@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="Angular/angular.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body ng-controller="myCtr">
+<container class="text-center">
+<div class="jumbotron">
+<h1>Search</h1>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<input type="text" class="form-control" placeholder="Enter Name" ng-model="searching">
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4" ng-repeat="personne in personnes | filter : searching ">
+<img src="img/{{personne.name}}.png">
+<br>
+<h3>{{personne.name}}</h3>
+<h5>{{personne.job}}</h5>
+</div>
+</div>
+</container>
+</body>
+</html>
